@@ -1,0 +1,13 @@
+project_id = "dffkqamssoiobdbwqlnw"
+
+# Sheet readers: allow gateway to forward requests even if the browser sends an
+# expired user access_token (getSession can return a stale JWT). Anon key is
+# already public in the client; real protection is server-side secrets + RLS.
+[functions.fetch-leads]
+verify_jwt = false
+
+[functions.fetch-website-leads]
+verify_jwt = false
+
+[functions.fetch-meta-campaigns]
+verify_jwt = false
